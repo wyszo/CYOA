@@ -17,7 +17,6 @@ fileprivate func readKeyboardInput() -> String? {
     return NSString(data: inputData, encoding: String.Encoding.utf8.rawValue) as String?
 }
 
-// [ ] can I make this static inside the method itself??
 fileprivate var currentSimulatedLine = 0
 fileprivate let simulatedInput = ["2", "5"]
 fileprivate let simulatedInputDelay: UInt32 = 1
