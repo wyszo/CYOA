@@ -14,6 +14,7 @@
 		430EB9B421F0E3DF004B09E0 /* IOReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B221F0E3DF004B09E0 /* IOReader.swift */; };
 		430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B521F0E3FF004B09E0 /* IOWriter.swift */; };
 		430EB9B821F0E6DE004B09E0 /* MockIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B721F0E6DE004B09E0 /* MockIO.swift */; };
+		430EB9BA21F0EE5B004B09E0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B921F0EE5B004B09E0 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		430EB9B221F0E3DF004B09E0 /* IOReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOReader.swift; sourceTree = "<group>"; };
 		430EB9B521F0E3FF004B09E0 /* IOWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOWriter.swift; sourceTree = "<group>"; };
 		430EB9B721F0E6DE004B09E0 /* MockIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIO.swift; sourceTree = "<group>"; };
+		430EB9B921F0EE5B004B09E0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				430EB9A921F0DC14004B09E0 /* Settings.swift */,
 				430EB9AB21F0DD55004B09E0 /* Game.swift */,
 				430EB99E21F0D92A004B09E0 /* main.swift */,
+				430EB9B921F0EE5B004B09E0 /* Strings.swift */,
 			);
 			path = CYOA;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */,
 				430EB9AA21F0DC14004B09E0 /* Settings.swift in Sources */,
+				430EB9BA21F0EE5B004B09E0 /* Strings.swift in Sources */,
 				430EB99F21F0D92A004B09E0 /* main.swift in Sources */,
 				430EB9B821F0E6DE004B09E0 /* MockIO.swift in Sources */,
 				430EB9AC21F0DD55004B09E0 /* Game.swift in Sources */,

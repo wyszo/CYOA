@@ -2,11 +2,12 @@ import Foundation
 
 class MockIO: IOReader {
     
-    private let simulatedInput = ["2", "5"]
+    private let simulatedInput = ["", "2", "5"]
     private let delay: UInt32 = 1
     
     private var currentInput = 0
     private let ioWriter: IOWriter
+    private let fallbackIOReader: IOReader = ConsoleIO()
     
     init(ioWriter: IOWriter) {
         self.ioWriter = ioWriter
@@ -17,8 +18,8 @@ class MockIO: IOReader {
     }
 }
 
-extension MockIO {
-    fileprivate func readMockInput() -> String? {
+fileprivate extension MockIO {
+    func readMockInput() -> String? {
         if currentInput < simulatedInput.endIndex {
             let line = simulatedInput[currentInput]
             currentInput += 1
@@ -29,7 +30,8 @@ extension MockIO {
             print(line)
             return line
         } else {
-            return nil
+            /** if value not provided by mock */
+            return fallbackIOReader.readLine()
         }
     }
 }
