@@ -1,6 +1,15 @@
 import Foundation
 
 final class Game {
+
+    private let ioReader: IOReader
+    private let ioWriter: IOWriter
+    
+    init(ioReader: IOReader = ConsoleIO(), ioWriter: IOWriter = ConsoleIO()) {
+        self.ioReader = ioReader
+        self.ioWriter = ioWriter
+    }
+    
     func start() {
         printIntro()
         let _ = readNumber()
@@ -26,11 +35,11 @@ fileprivate extension Game {
         var choice: Int? = nil
         
         while choice == nil {
-            if let line = readInput() {
+            if let line = ioReader.readLine() {
                 if let intChoice = Int(line) {
                     choice = intChoice
                 } else {
-                    print("Not a number! Try again!")
+                    ioWriter.print("Not a number! Try again!")
                 }
             }
         }
