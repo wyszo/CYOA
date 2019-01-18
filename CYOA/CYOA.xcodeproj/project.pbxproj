@@ -15,7 +15,20 @@
 		430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B521F0E3FF004B09E0 /* IOWriter.swift */; };
 		430EB9B821F0E6DE004B09E0 /* MockIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B721F0E6DE004B09E0 /* MockIO.swift */; };
 		430EB9BA21F0EE5B004B09E0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B921F0EE5B004B09E0 /* Strings.swift */; };
+		430EB9BC21F21067004B09E0 /* ScannerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9BB21F21067004B09E0 /* ScannerWrapper.swift */; };
+		430EB9CA21F212A4004B09E0 /* ScannerWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9C921F212A4004B09E0 /* ScannerWrapperTests.swift */; };
+		43CC77E621F2213800D8A500 /* ScannerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9BB21F21067004B09E0 /* ScannerWrapper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43CC77E421F2159900D8A500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 430EB99321F0D92A004B09E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 430EB99A21F0D92A004B09E0;
+			remoteInfo = CYOA;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		430EB99921F0D92A004B09E0 /* CopyFiles */ = {
@@ -39,10 +52,21 @@
 		430EB9B521F0E3FF004B09E0 /* IOWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOWriter.swift; sourceTree = "<group>"; };
 		430EB9B721F0E6DE004B09E0 /* MockIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIO.swift; sourceTree = "<group>"; };
 		430EB9B921F0EE5B004B09E0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		430EB9BB21F21067004B09E0 /* ScannerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerWrapper.swift; sourceTree = "<group>"; };
+		430EB9C121F210DA004B09E0 /* CYOATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYOATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		430EB9C921F212A4004B09E0 /* ScannerWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerWrapperTests.swift; sourceTree = "<group>"; };
+		43CC77E821F2221E00D8A500 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		430EB99821F0D92A004B09E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		430EB9BE21F210DA004B09E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				430EB99D21F0D92A004B09E0 /* CYOA */,
+				430EB9C221F210DA004B09E0 /* CYOATests */,
 				430EB99C21F0D92A004B09E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				430EB99B21F0D92A004B09E0 /* CYOA */,
+				430EB9C121F210DA004B09E0 /* CYOATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,10 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				430EB9AF21F0E3DF004B09E0 /* IO */,
-				430EB9A921F0DC14004B09E0 /* Settings.swift */,
 				430EB9AB21F0DD55004B09E0 /* Game.swift */,
-				430EB99E21F0D92A004B09E0 /* main.swift */,
+				430EB9A921F0DC14004B09E0 /* Settings.swift */,
 				430EB9B921F0EE5B004B09E0 /* Strings.swift */,
+				430EB99E21F0D92A004B09E0 /* main.swift */,
 			);
 			path = CYOA;
 			sourceTree = "<group>";
@@ -86,6 +112,7 @@
 				430EB9B121F0E3DF004B09E0 /* Protocols */,
 				430EB9B021F0E3DF004B09E0 /* InputHandling.swift */,
 				430EB9B721F0E6DE004B09E0 /* MockIO.swift */,
+				430EB9BB21F21067004B09E0 /* ScannerWrapper.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -97,6 +124,15 @@
 				430EB9B521F0E3FF004B09E0 /* IOWriter.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		430EB9C221F210DA004B09E0 /* CYOATests */ = {
+			isa = PBXGroup;
+			children = (
+				430EB9C921F212A4004B09E0 /* ScannerWrapperTests.swift */,
+				43CC77E821F2221E00D8A500 /* Info.plist */,
+			);
+			path = CYOATests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +155,24 @@
 			productReference = 430EB99B21F0D92A004B09E0 /* CYOA */;
 			productType = "com.apple.product-type.tool";
 		};
+		430EB9C021F210DA004B09E0 /* CYOATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430EB9C621F210DA004B09E0 /* Build configuration list for PBXNativeTarget "CYOATests" */;
+			buildPhases = (
+				430EB9BD21F210DA004B09E0 /* Sources */,
+				430EB9BE21F210DA004B09E0 /* Frameworks */,
+				430EB9BF21F210DA004B09E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43CC77E521F2159900D8A500 /* PBXTargetDependency */,
+			);
+			name = CYOATests;
+			productName = CYOATests;
+			productReference = 430EB9C121F210DA004B09E0 /* CYOATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,6 +184,9 @@
 				ORGANIZATIONNAME = ThomasW;
 				TargetAttributes = {
 					430EB99A21F0D92A004B09E0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					430EB9C021F210DA004B09E0 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -147,9 +204,20 @@
 			projectRoot = "";
 			targets = (
 				430EB99A21F0D92A004B09E0 /* CYOA */,
+				430EB9C021F210DA004B09E0 /* CYOATests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		430EB9BF21F210DA004B09E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		430EB99721F0D92A004B09E0 /* Sources */ = {
@@ -158,6 +226,7 @@
 			files = (
 				430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */,
 				430EB9AA21F0DC14004B09E0 /* Settings.swift in Sources */,
+				430EB9BC21F21067004B09E0 /* ScannerWrapper.swift in Sources */,
 				430EB9BA21F0EE5B004B09E0 /* Strings.swift in Sources */,
 				430EB99F21F0D92A004B09E0 /* main.swift in Sources */,
 				430EB9B821F0E6DE004B09E0 /* MockIO.swift in Sources */,
@@ -167,7 +236,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		430EB9BD21F210DA004B09E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43CC77E621F2213800D8A500 /* ScannerWrapper.swift in Sources */,
+				430EB9CA21F212A4004B09E0 /* ScannerWrapperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43CC77E521F2159900D8A500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 430EB99A21F0D92A004B09E0 /* CYOA */;
+			targetProxy = 43CC77E421F2159900D8A500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		430EB9A021F0D92A004B09E0 /* Debug */ = {
@@ -303,6 +389,40 @@
 			};
 			name = Release;
 		};
+		430EB9C721F210DA004B09E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CYOATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thomasw.CYOATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		430EB9C821F210DA004B09E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CYOATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thomasw.CYOATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -320,6 +440,15 @@
 			buildConfigurations = (
 				430EB9A321F0D92A004B09E0 /* Debug */,
 				430EB9A421F0D92A004B09E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		430EB9C621F210DA004B09E0 /* Build configuration list for PBXNativeTarget "CYOATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430EB9C721F210DA004B09E0 /* Debug */,
+				430EB9C821F210DA004B09E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
