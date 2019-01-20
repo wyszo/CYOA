@@ -25,6 +25,7 @@
 		43CC77F421F5158800D8A500 /* MockIOWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC77F321F5158800D8A500 /* MockIOWriter.swift */; };
 		43CC77F521F515A700D8A500 /* IOWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B521F0E3FF004B09E0 /* IOWriter.swift */; };
 		43CC77F621F5164400D8A500 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC77ED21F5147900D8A500 /* Paragraph.swift */; };
+		43CC780721F5289400D8A500 /* adventure.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43CC780421F5259100D8A500 /* adventure.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +41,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		430EB99921F0D92A004B09E0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				43CC780721F5289400D8A500 /* adventure.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -67,6 +69,7 @@
 		43CC77ED21F5147900D8A500 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		43CC77EF21F514B000D8A500 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		43CC77F321F5158800D8A500 /* MockIOWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIOWriter.swift; sourceTree = "<group>"; };
+		43CC780421F5259100D8A500 /* adventure.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = adventure.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		430EB99D21F0D92A004B09E0 /* CYOA */ = {
 			isa = PBXGroup;
 			children = (
+				43CC77F821F51EE000D8A500 /* Adventures */,
 				43CC77EC21F5146F00D8A500 /* Model */,
 				430EB9AF21F0E3DF004B09E0 /* IO */,
 				430EB9AB21F0DD55004B09E0 /* Game.swift */,
@@ -166,6 +170,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		43CC77F821F51EE000D8A500 /* Adventures */ = {
+			isa = PBXGroup;
+			children = (
+				43CC780421F5259100D8A500 /* adventure.txt */,
+			);
+			path = Adventures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +187,7 @@
 			buildPhases = (
 				430EB99721F0D92A004B09E0 /* Sources */,
 				430EB99821F0D92A004B09E0 /* Frameworks */,
+				43CC780021F5248B00D8A500 /* Resources */,
 				430EB99921F0D92A004B09E0 /* CopyFiles */,
 			);
 			buildRules = (
@@ -242,6 +255,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		430EB9BF21F210DA004B09E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43CC780021F5248B00D8A500 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

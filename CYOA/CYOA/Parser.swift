@@ -11,8 +11,9 @@ class Parser {
         
         var results: [Paragraph] = []
         
-        string.components(separatedBy: Constants.paragraphSeparator).forEach {
-            if let paragraph = parse(paragraph: $0) {
+        let paragraphs = string.components(separatedBy: Constants.paragraphSeparator)
+        for (index, element) in paragraphs.enumerated() {
+            if let paragraph = parse(paragraph: element, paragraphNumber: index) {
                 results.append(paragraph)
             }
         }
@@ -29,13 +30,13 @@ fileprivate extension Parser {
         ioWriter.print("Parsing Error! " + string)
     }
     
-    func parse(paragraph: String) -> Paragraph? {
+    func parse(paragraph: String, paragraphNumber: Int) -> Paragraph? {
         let scanner = ScannerWrapper(string: paragraph)
         
         _ = scanner.scan(upTo: "id:", consumingDelimiter: true)
         let id = try? scanner.scanInt()
         if id == nil {
-            printError("Missing 'id:' clause in paragraph #[?]")
+            printError("Missing 'id:' clause in paragraph #\(paragraphNumber)")
             return nil
         }
         
@@ -46,7 +47,7 @@ fileprivate extension Parser {
         let choices = allChoices.components(separatedBy: ",").map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }.compactMap { Int($0) }
         
         if choices.count == 0 {
-            printError("Missing 'choices:' clause in paragraph ?")
+            printError("Missing 'choices:' clause in paragraph \(id) (#\(paragraphNumber)")
             return nil
         }
         
