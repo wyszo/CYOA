@@ -1,7 +1,7 @@
 import XCTest
 @testable import CYOA
 
-class CYOATests: XCTestCase {
+class ScannerWrapperTests: XCTestCase {
     
     var scanner: ScannerWrapper!
     
