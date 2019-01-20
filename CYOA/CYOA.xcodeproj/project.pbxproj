@@ -26,6 +26,9 @@
 		43CC77F521F515A700D8A500 /* IOWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430EB9B521F0E3FF004B09E0 /* IOWriter.swift */; };
 		43CC77F621F5164400D8A500 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC77ED21F5147900D8A500 /* Paragraph.swift */; };
 		43CC780721F5289400D8A500 /* adventure.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43CC780421F5259100D8A500 /* adventure.txt */; };
+		43CC780921F52FFB00D8A500 /* IONumberReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780821F52FFB00D8A500 /* IONumberReader.swift */; };
+		43CC780B21F530DB00D8A500 /* ParagraphWalker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780A21F530DB00D8A500 /* ParagraphWalker.swift */; };
+		43CC780D21F5328000D8A500 /* AdventureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780C21F5328000D8A500 /* AdventureReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		43CC77EF21F514B000D8A500 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		43CC77F321F5158800D8A500 /* MockIOWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIOWriter.swift; sourceTree = "<group>"; };
 		43CC780421F5259100D8A500 /* adventure.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = adventure.txt; sourceTree = "<group>"; };
+		43CC780821F52FFB00D8A500 /* IONumberReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IONumberReader.swift; sourceTree = "<group>"; };
+		43CC780A21F530DB00D8A500 /* ParagraphWalker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphWalker.swift; sourceTree = "<group>"; };
+		43CC780C21F5328000D8A500 /* AdventureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +120,13 @@
 				43CC77F821F51EE000D8A500 /* Adventures */,
 				43CC77EC21F5146F00D8A500 /* Model */,
 				430EB9AF21F0E3DF004B09E0 /* IO */,
+				43CC780C21F5328000D8A500 /* AdventureReader.swift */,
 				430EB9AB21F0DD55004B09E0 /* Game.swift */,
+				430EB99E21F0D92A004B09E0 /* main.swift */,
+				43CC780A21F530DB00D8A500 /* ParagraphWalker.swift */,
 				43CC77EA21F5142A00D8A500 /* Parser.swift */,
 				430EB9A921F0DC14004B09E0 /* Settings.swift */,
 				430EB9B921F0EE5B004B09E0 /* Strings.swift */,
-				430EB99E21F0D92A004B09E0 /* main.swift */,
 			);
 			path = CYOA;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 				430EB9B021F0E3DF004B09E0 /* InputHandling.swift */,
 				430EB9B721F0E6DE004B09E0 /* MockIO.swift */,
 				430EB9BB21F21067004B09E0 /* ScannerWrapper.swift */,
+				43CC780821F52FFB00D8A500 /* IONumberReader.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -277,11 +286,14 @@
 			files = (
 				430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */,
 				430EB9AA21F0DC14004B09E0 /* Settings.swift in Sources */,
+				43CC780B21F530DB00D8A500 /* ParagraphWalker.swift in Sources */,
 				43CC77EE21F5147900D8A500 /* Paragraph.swift in Sources */,
 				43CC77EB21F5142A00D8A500 /* Parser.swift in Sources */,
 				430EB9BC21F21067004B09E0 /* ScannerWrapper.swift in Sources */,
 				430EB9BA21F0EE5B004B09E0 /* Strings.swift in Sources */,
 				430EB99F21F0D92A004B09E0 /* main.swift in Sources */,
+				43CC780921F52FFB00D8A500 /* IONumberReader.swift in Sources */,
+				43CC780D21F5328000D8A500 /* AdventureReader.swift in Sources */,
 				430EB9B821F0E6DE004B09E0 /* MockIO.swift in Sources */,
 				430EB9AC21F0DD55004B09E0 /* Game.swift in Sources */,
 				430EB9B321F0E3DF004B09E0 /* InputHandling.swift in Sources */,

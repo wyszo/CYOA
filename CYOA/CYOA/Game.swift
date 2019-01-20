@@ -14,47 +14,18 @@ final class Game {
         printGameIntro()
         readAnyKey()
         
-        // [ ] Write a paragraph walker that controls the game and takes user input to change displayed paragraph
-        parseAdventureFromFile()
-        let _ = readNumber()
+        let adventureReader = AdventureReader(ioWriter: ioWriter)
+        let paragraphs = adventureReader.loadAdventure()
+        
+        let paragraphWalker = ParagraphWalker(paragraphs: paragraphs, ioReader: ioReader, ioWriter: ioWriter)
+        paragraphWalker.start()
     }
 }
 
 fileprivate extension Game {
-    func parseAdventureFromFile() {
-        let parser = Parser(ioWriter: ioWriter)
-        
-        // This will be a problem when trying to run this CLI utility using web repl, I'll have to host a file and access it online first
-        let adventurePath = FileManager.default.currentDirectoryPath + "/adventure.txt"
-        
-        if let string = try? String(contentsOfFile: adventurePath) {
-            _ = parser.parse(string)
-        } else {
-            ioWriter.print("Parsing error! Can't find adventure file!")
-        }
-    }
     
     func printGameIntro() {
         ioWriter.print(Strings.gameIntro)
-    }
-    
-    /**
-     Returns a number selected by user eventually.
-     In case of incorrect input, asks again.
-     */
-    func readNumber() -> Int {
-        var choice: Int? = nil
-        
-        while choice == nil {
-            if let line = ioReader.readLine() {
-                if let intChoice = Int(line) {
-                    choice = intChoice
-                } else {
-                    ioWriter.print("Not a number! Try again!")
-                }
-            }
-        }
-        return choice!
     }
     
     func readAnyKey() {
