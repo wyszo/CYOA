@@ -13,13 +13,4 @@ struct Strings {
         \
         Press [Enter] to continue.
         """
-    
-    // This is temporary, will be removed
-    struct GameEntries {
-        static let firstEntry = """
-            \nYou’re having a dream you’re in one of those interactive fiction novels that lets you decide what happens in the story by flipping to different parts of the book. It’s great. It gives you the feeling that the choices you make really matter, unlike reality where you have no autonomy whatsoever.
-
-            To continue, go to Entry [3].
-            """
-    }
 }
