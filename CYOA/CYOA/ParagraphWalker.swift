@@ -30,6 +30,7 @@ fileprivate extension ParagraphWalker {
         let paragraph = paragraphs[number]
         ioWriter.print(paragraph.text)
         let next = numberReader.readNumber(from: paragraph.choices)
+        ioWriter.print("\n")
         return next
     }
 }

@@ -147,6 +147,8 @@ You charge at Janet. She easily picks you up with her enormous hands and devours
 
 The End.
 
+To restart the game, go to Entry 0.
+
 choices: 0
 
 --- next ---
@@ -171,6 +173,8 @@ You go home, make yourself some tea and relax with a good book today. As it turn
 
 The End.
 
+To restart the game, go to Entry 0.
+
 choices: 0
 
 --- next ---
@@ -192,6 +196,8 @@ id: 14
 You don’t have a penny to your name. Huh. I guess the lesson here is never do anything bold or exciting. Now we know.
 
 The End.
+
+To restart the game, go to Entry 0.
 
 choices: 0
 
@@ -216,6 +222,8 @@ After a series of sound financial investments you eventually retire early to a l
 Fuck you.
 
 The End.
+
+To restart the game, go to Entry 0.
 
 choices: 0
 
@@ -260,6 +268,8 @@ You plunge the chair leg deep within Count Notavampire’s heart. The man scream
 You’re sentenced to life in prison.
 
 The End.
+
+To restart the game, go to Entry 0.
 
 choices: 0
 
@@ -347,6 +357,8 @@ All because you educated yourself about the dangers of stereotyping.
 
 The End.
 
+To restart the game, go to Entry 0.
+
 choices: 0
 
 --- next ---
@@ -401,6 +413,8 @@ She’ll get it one day.
 
 The End.
 
+To restart the game, go to Entry 0.
+
 choices: 0
 
 --- next ---
@@ -418,5 +432,7 @@ Fine.
 Congrats! You did it champ! Good job! Wow! Wowie! So proud of you! Real proud! Real, real proud! What are you gonna do now? Eat some ice cream watch Netflix and go to sleep? Wow! You’re a hero, I tell ya. A real hero.
 
 The End.
+
+To restart the game, go to Entry 0.
 
 choices: 0

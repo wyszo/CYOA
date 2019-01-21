@@ -2,7 +2,19 @@ import Foundation
 
 struct Strings {
     static let gameIntro = """
-        CYOA game v\(Settings.version)
+        \n
+        \
+            $$$$$$\\  $$\\     $$\\  $$$$$$\\   $$$$$$\\
+            $$  __$$\\ \\$$\\   $$  |$$  __$$\\ $$  __$$\\
+            $$ /  \\__| \\$$\\ $$  / $$ /  $$ |$$ /  $$ |
+            $$ |        \\$$$$  /  $$ |  $$ |$$$$$$$$ |
+            $$ |         \\$$  /   $$ |  $$ |$$  __$$ |
+            $$ |  $$\\     $$ |    $$ |  $$ |$$ |  $$ |
+            \\$$$$$$  |    $$ |     $$$$$$  |$$ |  $$ |
+             \\______/     \\__|     \\______/ \\__|  \\__|
+        \n
+        \
+        CYOA game v\(Settings.version) (Choose Your Own Adventure)
         Open Source. Feel free to fork and modify.\n
         \
         Programming: Thomas Wyszomirski (https://github.com/wyszo/)

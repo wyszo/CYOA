@@ -40,17 +40,23 @@ fileprivate extension Parser {
             return nil
         }
         
-        let text = scanner.scan(upTo: "choices:", consumingDelimiter: true)
+        let text = scanner.scan(upTo: "choices:", consumingDelimiter: true).trimmingWhitespaceAtTheEnd()
         let allChoices = scanner.scanTillEnd()
         
         // TODO: this should be extracted somewhere, to some unit-testable utility!
         let choices = allChoices.components(separatedBy: ",").map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }.compactMap { Int($0) }
         
         if choices.count == 0 {
-            printError("Missing 'choices:' clause in paragraph \(id) (#\(paragraphNumber)")
+            printError("Missing 'choices:' clause in paragraph \(id ?? -1) (#\(paragraphNumber)")
             return nil
         }
         
         return Paragraph(text: text, choices: choices)
+    }
+}
+
+fileprivate extension String {
+    func trimmingWhitespaceAtTheEnd() -> String {
+        return replacingOccurrences(of: "\\s+$", with: "", options: .regularExpression)
     }
 }

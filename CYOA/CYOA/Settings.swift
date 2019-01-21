@@ -1,6 +1,6 @@
 import Foundation
 
 struct Settings {
-    static let mockResponses = true
-    static let version = "0.1"
+    static let mockResponses = false
+    static let version = "0.2"
 }
