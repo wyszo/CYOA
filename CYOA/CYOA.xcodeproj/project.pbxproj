@@ -29,6 +29,7 @@
 		43CC780921F52FFB00D8A500 /* IONumberReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780821F52FFB00D8A500 /* IONumberReader.swift */; };
 		43CC780B21F530DB00D8A500 /* ParagraphWalker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780A21F530DB00D8A500 /* ParagraphWalker.swift */; };
 		43CC780D21F5328000D8A500 /* AdventureReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC780C21F5328000D8A500 /* AdventureReader.swift */; };
+		43CC783521F6768D00D8A500 /* RemoteFileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC783421F6768D00D8A500 /* RemoteFileDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		43CC780821F52FFB00D8A500 /* IONumberReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IONumberReader.swift; sourceTree = "<group>"; };
 		43CC780A21F530DB00D8A500 /* ParagraphWalker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphWalker.swift; sourceTree = "<group>"; };
 		43CC780C21F5328000D8A500 /* AdventureReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureReader.swift; sourceTree = "<group>"; };
+		43CC783421F6768D00D8A500 /* RemoteFileDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFileDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				43CC77F821F51EE000D8A500 /* Adventures */,
 				43CC77EC21F5146F00D8A500 /* Model */,
 				430EB9AF21F0E3DF004B09E0 /* IO */,
+				43CC783321F6767900D8A500 /* Networking */,
 				43CC780C21F5328000D8A500 /* AdventureReader.swift */,
 				430EB9AB21F0DD55004B09E0 /* Game.swift */,
 				430EB99E21F0D92A004B09E0 /* main.swift */,
@@ -185,6 +188,14 @@
 				43CC780421F5259100D8A500 /* adventure.txt */,
 			);
 			path = Adventures;
+			sourceTree = "<group>";
+		};
+		43CC783321F6767900D8A500 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				43CC783421F6768D00D8A500 /* RemoteFileDownloader.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CC783521F6768D00D8A500 /* RemoteFileDownloader.swift in Sources */,
 				430EB9B621F0E3FF004B09E0 /* IOWriter.swift in Sources */,
 				430EB9AA21F0DC14004B09E0 /* Settings.swift in Sources */,
 				43CC780B21F530DB00D8A500 /* ParagraphWalker.swift in Sources */,
