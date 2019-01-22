@@ -1,19 +1,33 @@
 import Foundation
 
 protocol RemoteFileDownloaderProtocol {
-    func downloadRemoteFile(url: URL, completion: @escaping (String?) -> ())
+    func downloadRemoteFileSynchronous(url: URL) -> String?
+    func downloadRemoteFileAsync(url: URL, completion: @escaping (String?) -> ())
 }
 
 final class RemoteFileDownloader: RemoteFileDownloaderProtocol {
     
     let ioWriter: IOWriter
     var task: URLSessionDataTask?
+    private var asyncResult: String?
     
     init(ioWriter: IOWriter) {
         self.ioWriter = ioWriter
     }
     
-    func downloadRemoteFile(url: URL, completion: @escaping (String?) -> ()) {
+    func downloadRemoteFileSynchronous(url: URL) -> String? {
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        downloadRemoteFileAsync(url: url) { [weak self] result in
+            self?.asyncResult = result
+            semaphore.signal()
+        }
+        _ = semaphore.wait(timeout: .now() + 20)
+        
+        return self.asyncResult
+    }
+    
+    func downloadRemoteFileAsync(url: URL, completion: @escaping (String?) -> ()) {
         
         task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             
@@ -33,12 +47,4 @@ final class RemoteFileDownloader: RemoteFileDownloaderProtocol {
         }
         task?.resume()
     }
-}
-
-// [ ] move this out of here
-fileprivate func urlFrom(remotePath: String) -> URL? {
-    guard let url = URL(string: remotePath) else {
-        return nil
-    }
-    return url
 }

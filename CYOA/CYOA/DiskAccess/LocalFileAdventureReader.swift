@@ -1,7 +1,7 @@
 import Foundation
 
 // [ ] unit tests
-final class AdventureReader {
+final class LocalFileAdventureReader {
     let ioWriter: IOWriter
     
     init(ioWriter: IOWriter) {
@@ -17,12 +17,11 @@ final class AdventureReader {
     }
 }
 
-fileprivate extension AdventureReader {
+fileprivate extension LocalFileAdventureReader {
     
     func adventureFromFile(named fileName: String) -> [Paragraph] {
         let parser = Parser(ioWriter: ioWriter)
         
-        // This will be a problem when trying to run this CLI utility using web repl, I'll have to host a file and access it online first
         let adventurePath = FileManager.default.currentDirectoryPath + "/\(fileName)"
         
         if let string = try? String(contentsOfFile: adventurePath) {

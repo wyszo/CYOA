@@ -25,4 +25,16 @@ struct Strings {
         \
         Press [Enter] to continue.
         """
+    
+    static let localOrRemoteChoice = """
+        Press [Enter] again to play a default adventure.
+        Type 5 and confirm with [Enter] to load a remote adventure
+        """
+    static let remoteAdventureShortcut = "5"
+    
+    static let askRemoteAdventureUrl = """
+        What's the remote adventure URL?
+        Leaving this blank will take you back to the main menu.
+        """
+    static let incorrectUrl = "Incorrect URL. Try again."
 }
