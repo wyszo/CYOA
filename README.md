@@ -41,31 +41,19 @@ Currently no dependency manager is being used, nothing to install before compili
 There are a few unit tests, make sure to run them when you make changes in code. 
 
 
-### Authors
 
-Programming: Thomas Wyszomirski, [Twitter](https://twitter.com/Wyszo), [blog](https://www.wyszo.wordpress.com)
+## Adding your own adventure
 
-Writing (default adventure): Reddit user [u/gargle-greg](https://www.reddit.com/user/gargle-greg/) 
+It is possible to play a different adventure than the one that's provided. 
 
+### File format
 
-### License
-
-This project is licensed under the MIT License - see the [LICENSE.md] file for details
-
-
-### Versioning
-
-Semantic versioning is being used ([SemVer](http://semver.org))
-
-
-### Adding your own adventure
-
-It is possible to play a different adventure than the one that's provided. The file containing the adventure has to follow a simple format like so: 
+The adventure file has to be formatted like this:
 
 ```
 id: 0
 
-You are reading instrauctions on how the custom adventure file format should look like. You are pretty clueless about all this, but very curious!
+You are reading instructions on how the custom adventure file format should look like. You are pretty clueless about all this, but very curious!
 
 
 To continue, go to Entry 1.
@@ -109,7 +97,7 @@ choices: 0
 
 ```
 
-So in general a file consists of multiple sections (paragraphs) of the same structure separated by a delimiter:
+As in the above example, a file consists of multiple sections (paragraphs) separated by a delimiter: 
 
 ```
 <paragraph>
@@ -119,7 +107,7 @@ So in general a file consists of multiple sections (paragraphs) of the same stru
 <paragraph>
 ```
 
-A single paragraph has following format: 
+A single paragraph is formatted like this: 
 
 ```
 id: $id
@@ -131,14 +119,63 @@ choices: $choice_1, $choice_2, ...
 
 Where: 
 
-```$id``` - an obligatory number. They don't have to be in order or continuous (but it helps with readability). 
+`$id` - mandatory id number. They don't have to be in order or even continuous (but it helps with readability). 
 
-$text - any text you want to display for a given paragraph. Can be multiline and with empty lines in between. Anything between 'id' and 'choices' section will be displayed as paragraph content in the game.
+`$text` - any text you want to display for a given paragraph. Can be multiline and have empty lines. Anything between 'id' and 'choices' section will be displayed as paragraph content in the game.
 
-$choice_1, $choice_2, ... - ids of paragraphs that you allow user to jump to from current paragraph. At least one choice is mandatory! If you end the game, just loop to the first paragraph here.  
+`$choice_1, $choice_2, ...` - ids of paragraphs to jump to from the current paragraph. At least one choice is mandatory! In the final paragraph it is recommended to loop to the first one, so the user can easily restart the game. 
 
-If the paragraph is not following the format above, it will not parse and will not be reachable in the game, thus breaking it. 
+If the paragraph is not in the correct format, it won't parse and will not be reachable in the game.
 
-When running from XCode on loading the adventure, you'll get a message saying which paragraph didn't parse correctly (if any). 
+When loading the corrupt adventure file you should see a warning message stating which paragraph was malformed and didn't parse correctly. The game will be broken from that paragraph on. 
 
+
+### Loading custom adventure files
+
+#### 1) Local file 
+
+If you're compiling the game and running from XCode, you could simply modify `adventure.txt` file. 
+
+Or add a new one: 
+1) Add a new resource text file to the XCode project 
+2) Tell CYOA to load it by default: change `Constants.fileName` in `LocalFileAdventureReader.swift` to the name of your file. 
+
+There's no way of loading a local file without running XCode at the moment. 
+
+
+#### 2) Online file
+
+If you have a URL of an adventure file on server, you could run the engine, select to run a remote adventure, type in a URL and press enter. If the file is in correct format, everything should work. 
+
+#### 3) Local webserver
+
+You could run a webserver on your machine and serve a text file through it. It will be accessible through http protocol and you could pass it's new address as a remote URL. 
+
+In terminal navigate to a directory with your textfile (let's assume it's named `my_adventure.txt`). 
+
+Run `python -m SimpleHTTPServer 1337` or `python3 -m http.server 1337`. From now on, you can use `http://localhost:1337/my_adventure.txt` as a remote resource URL (as long as a python server is running).  
+
+### Debugging your adventure
+
+Adventure file is loaded to memory on game start and never reloaded afterwards. If you made changes to your adventure and would like to see them in the game, you have to close and reopen the program. 
+
+
+## General Information
+
+
+### Authors
+
+Programming: Thomas Wyszomirski, [Twitter](https://twitter.com/Wyszo), [blog](https://www.wyszo.wordpress.com)
+
+Writing (default adventure): Reddit user [u/gargle-greg](https://www.reddit.com/user/gargle-greg/) 
+
+
+### Versioning
+
+Semantic versioning is being used ([SemVer](http://semver.org))
+
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE.md] file for details
 
